@@ -7,10 +7,10 @@ const serverless = require('serverless-http');
 
 
 const con = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "engineerwork2"
+    host: "sql.skajnet12344.nazwa.pl",
+    user: "skajnet12344_engineerwork2",
+    password: "Velkoznamida1",
+    database: "skajnet12344_engineerwork2"
 });
 
 async function select(x, y) {
