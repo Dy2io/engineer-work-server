@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const mysql = require('mysql2/promise');
 const serverless = require('serverless-http');
+const path = require('path');
 
 
 const con = mysql.createPool({
