@@ -1,7 +1,9 @@
+'use strict';
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const mysql = require('mysql2/promise');
+const serverless = require('serverless-http');
 
 
 const con = mysql.createPool({
@@ -86,7 +88,5 @@ app.get('/q0', async function(req, res) {
 })
 
 
-app.listen(5698, function() {
-    console.log('Link do serwera:' + 'http://localhost:5698/q0?x1=18&y1=18');
-
-})
+module.exports = app;
+module.exports.handler = serverless(app);
