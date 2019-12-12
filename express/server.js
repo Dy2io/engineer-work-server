@@ -6,6 +6,7 @@ const mysql = require('mysql2/promise');
 const serverless = require('serverless-http');
 
 
+
 const con = mysql.createPool({
     host: "sql.skajnet12344.nazwa.pl",
     user: "skajnet12344_engineerwork2",
@@ -86,6 +87,8 @@ app.get('/q0', async function(req, res) {
     res.send(data);
     console.log(data)
 })
+
+
 
 module.exports = app;
 module.exports.handler = serverless(app);
